@@ -4,7 +4,11 @@ node {
     }
     
     stage('Gradle build') {
-        sh 'gradle build'
+        sh 'gradle -b mcc-auth-api-template/build.gradle clean build'
+    }
+    
+    stage('Gradle bootJar') {
+        sh 'gradle -b mcc-auth-api-template/build.gradle bootJar'
     }
     
     stage('User Acceptance Test') {
