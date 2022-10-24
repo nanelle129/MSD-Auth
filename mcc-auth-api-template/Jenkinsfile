@@ -1,0 +1,9 @@
+node {
+    stage('Checkout') {
+        git branch: 'master', url: 'https://github.com/nanelle129/MSD-Auth.git'
+    }
+    
+    stage('Gradle build') {
+        sh 'gradle build'
+    }
+}
