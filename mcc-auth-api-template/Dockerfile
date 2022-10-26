@@ -10,4 +10,4 @@ ARG targethost=localhost:8080
 ENV API_HOST=$targethost
 ARG LIBS=app/build/libs
 COPY --from=builder ${LIBS}/ /app/lib
-ENTRYPOINT ["java","-jar","./app/lib/spring-boot-jpa-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java","-jar","./app/lib/project-auth-service-0.0.1-SNAPSHOT.jar"]

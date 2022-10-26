@@ -48,7 +48,9 @@ public class RegisterAPI {
 	private void postNewCustomerToCustomerAPI(String json_string) {
 		try {
 
-			URL url = new URL("http://localhost:8080/api/customers");
+			String apiHost = System.getenv("API_HOST");
+			URL url = new URL("http://"+apiHost+"/api/customers");
+			
 			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 			conn.setDoOutput(true);
 			conn.setRequestMethod("POST");

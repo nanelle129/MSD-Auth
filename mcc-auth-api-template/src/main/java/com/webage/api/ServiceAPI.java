@@ -25,5 +25,7 @@ public class ServiceAPI {
 		return "<h3>The Authentication service is up and running!</h3>" + "<br/>Instance: " + instanceId + ", " + "<br/>DateTime: " + dateformat  + "<br/>CallCount: "+count;
 	}
 	
+	
+	
 
 }
