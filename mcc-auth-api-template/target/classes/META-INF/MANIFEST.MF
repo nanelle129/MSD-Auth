@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: osboxes
+Build-Jdk: 11.0.5
+Implementation-Title: Spring-Boot-JPA
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.webage.spring.samples
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/spring-boot-jpa
+Created-By: Maven Integration for Eclipse
+
