@@ -30,10 +30,11 @@ node {
 		description: '', name: 'Pass')]
 		
 		if(response=="Yes") {
-			stage('Deploy') {
-			sh 'gradle build'
-			}
-		}
+	    stage('Deploy to Kubenetes cluster - auth client') {
+	      sh "kubectl create deployment event-authclient --image=event-authclient:v1.0"
+	      sh "kubectl expose deployment event-authclient --type=LoadBalancer --port=8081"
+	    }
+	  }
 	}
 	
 	stage("Production Deployment View"){
