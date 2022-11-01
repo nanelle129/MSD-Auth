@@ -30,9 +30,9 @@ node {
 		description: '', name: 'Pass')]
 		
 		if(response=="Yes") {
-	    stage('Deploy to Kubenetes cluster - auth client') {
-	      sh "kubectl create deployment event-authclient --image=event-authclient:v1.0"
-	      sh "kubectl expose deployment event-authclient --type=LoadBalancer --port=8081"
+	    stage('Deploy to Kubenetes cluster - auth') {
+	      sh "kubectl create deployment event-auth --image=event-auth:v1.0"
+	      sh "kubectl expose deployment event-auth --type=LoadBalancer --port=8081"
 	    }
 	  }
 	}
