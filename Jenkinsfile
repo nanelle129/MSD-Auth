@@ -32,7 +32,7 @@ node {
 		if(response=="Yes") {
 	    stage('Deploy to Kubenetes cluster - auth') {
 	      sh "kubectl create deployment event-auth --image=event-auth:v1.0"
-		set env deployment/event-auth API_HOST=$(kubectl get service/event-data -o jsonpath='{.spec.clusterIP}'):8080
+		sh "set env deployment/event-auth API_HOST=$(kubectl get service/event-data -o jsonpath='{.spec.clusterIP}'):8080"
 	      sh "kubectl expose deployment event-auth --type=LoadBalancer --port=8081"
 	    }
 	  }
